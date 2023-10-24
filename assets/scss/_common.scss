@@ -1,0 +1,132 @@
+
+
+.color-1{color: $color-1;}
+.color-2{color: $color-2;}
+.color-3{color: $color-3;}
+.color-4{color: $color-4;}
+.color-5{color: $color-5;}
+
+.color-gray-1{color: $color-gray-1;}
+.color-gray-2{color: $color-gray-2;}
+.color-gray-3{color: $color-gray-3;}
+.color-gray-4{color: $color-gray-4;}
+.color-gray-5{color: $color-gray-5;}
+
+*,:after,:before {
+  box-sizing: border-box
+}
+
+
+/* ANIMAIONS */
+@keyframes shadow-in-rotate{
+  0% {
+    box-shadow: inset -1px -1px 0px 1px rgba(black, 0.5);
+  }
+  25% {
+    box-shadow: inset 1px -1px 0px 1px rgba(black, 0.5);
+  }
+  50% {
+    box-shadow: inset 1px 1px 0px 1px rgba(black, 0.5);
+  }
+  75% {
+    box-shadow: inset -1px 1px 0px 1px rgba(black, 0.5);
+  }
+}
+@keyframes shadow-out-rotate{
+  0% {
+    box-shadow: -1px -1px 0px 0px black;
+  }
+  25% {
+    box-shadow: 1px -1px 0px 0px black;
+  }
+  50% {
+    box-shadow: 1px 1px 0px 0px black;
+  }
+  75% {
+    box-shadow: -1px 1px 0px 0px black;
+  }
+}
+
+
+// CHROME
+::-webkit-scrollbar{
+	width: 3px;
+	position: absolute;
+	height: 3px;
+}
+ ::-webkit-scrollbar-thumb{
+ 	z-index: 500;
+	background-color: $color-3;
+  &:hover, &:active{
+    background-color: $color-3;
+  }
+}
+::-webkit-scrollbar-track-piece{
+	background-color: transparent;
+}
+// OPERA
+::-o-scrollbar{
+	width: 3px;
+	position: absolute;
+}
+::-o-scrollbar-thumb{
+	background-color: $color-3;
+  &:hover, &:active{
+    background-color: $color-3;
+  }
+}
+::-o-scrollbar-track-piece{
+	background-color: transparent;
+}
+::selection {
+    background: $color-3;
+    color: $color-1;
+    text-shadow: none;
+}
+
+
+
+body{
+  font-size: 15px;
+  font-family: $font-family-1;
+  color: white;
+}
+
+input, button, textarea{
+  border: 0;
+  &:focus, &:active{
+    border: 0;
+    outline: none;
+  }
+}
+button{
+  background-color: initial;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+.container{
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid{
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+input:focus, button:focus{
+	outline: transparent;
+}
+
+.hide{
+  display: none;
+}
+
+.shadow-def{
+  box-shadow: 5px 5px 0px 2px black, 0px 0px 0px 2px black;
+}

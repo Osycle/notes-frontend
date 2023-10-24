@@ -1,0 +1,53 @@
+
+
+$color-1: var(--color-1);
+$color-2: var(--color-2);
+$color-3: var(--color-3);
+$color-4: var(--color-4);
+$color-5: var(--color-5);
+
+
+$color-gray-1: var(--color-gray-1);
+$color-gray-2: var(--color-gray-2);
+$color-gray-3: var(--color-gray-3);
+$color-gray-4: var(--color-gray-4);
+$color-gray-5: var(--color-gray-5);
+$color-gray-6: var(--color-gray-6);
+
+$border-def: var(--border-def);
+
+$color-red: #d71515;
+
+$font-family-1: 'Myriad Pro';
+$font-family-2: 'Manrope';
+
+@mixin hover-outshadow{
+  transition: 0.2s ease;
+  backface-visibility: hidden;
+  @include shadow-border();
+  &:hover{
+    cursor: pointer;
+    animation: var(--animation-sir);
+    box-shadow: inset -1px -1px 0px 1px rgba(black, 0.5);
+    transform: translateY(-3px);
+    &:after{
+      box-shadow: 10px 10px 0px -5px black, -10px -10px 0px 3px black;
+    }
+  }
+}
+@mixin shadow-border{
+  &:after{
+    transition: 0.2s ease;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    box-shadow: 
+          5px 5px 0px -1px black, 
+          0px 0px 0px 3px black;
+  }
+}
